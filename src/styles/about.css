@@ -17,5 +17,5 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(pink, cyan);
+    background-image: linear-gradient(yellow, cyan);
 }

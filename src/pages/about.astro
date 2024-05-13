@@ -1,6 +1,17 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import '../styles/about.css';
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Manny",
+  country: "USA",
+  occupation: "Technical Coder",
+  hobbies: ["Yo-ing", "Hehe-ing", "Gwimbly-ing"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <!DOCTYPE html>
@@ -9,7 +20,7 @@ import '../styles/about.css';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About: {identity.firstName}</title>
 </head>
 
 <body>
@@ -18,6 +29,10 @@ import '../styles/about.css';
 
     <h1>About</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    <p>My skills are:</p>
+    <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
     
 </body>
 
